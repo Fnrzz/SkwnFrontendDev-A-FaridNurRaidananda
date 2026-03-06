@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useGetProducts } from "../hooks/getProduct";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -6,10 +6,6 @@ const OurProducts = () => {
   const [data] = useGetProducts();
 
   const [activeIndex, setActiveIndex] = useState(1);
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   const handlePrev = () => {
     if (!data) return;
